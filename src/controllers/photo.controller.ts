@@ -52,10 +52,10 @@ export async function updatePhoto(req:Request, res:Response): Promise<Response>{
 }
 //Create a photo 
 export  async function createPhoto(req : Request ,res : Response) :Promise<Response>{
-    const {tittle, description}=req.body;
+    const {title, description}=req.body;
     console.log(req.file);
     const newPhoto ={
-        tittle: tittle,
+        tittle: title,
         description: description,
         imagePath:req.file.path
     };
